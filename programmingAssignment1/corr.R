@@ -1,6 +1,9 @@
+###  Calculate the correlation between sulfate and nitrat ###
+
 corr <- function(directory, threshold = 0) {
   
-  files <- list.files(directory, full.name=TRUE)  
+  files <- list.files(directory, full.name=TRUE)
+  ## Create empty vector to put in resluts from for loop
   result <- c()
   
   for (i in 1:length(files)) {    
@@ -14,4 +17,5 @@ corr <- function(directory, threshold = 0) {
   return(result) 
 }
 
+## Test
 # corr("specdata", 150)

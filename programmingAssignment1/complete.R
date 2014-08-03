@@ -1,3 +1,5 @@
+### Report the number of completely observed cases in each data file ###
+
 complete <- function(directory, id = 1:332) {
   files <- list.files(directory, full.name=TRUE)
   data <- data.frame()
@@ -8,7 +10,7 @@ complete <- function(directory, id = 1:332) {
   colnames(data)[2] <- "nobs"
   
   if (id[1] == max(id)) {
-    data <- data[order(- data$ID), ]
+    data <- data[order(-data$ID), ]
     return(data)
   }
   else {
